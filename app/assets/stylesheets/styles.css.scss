@@ -1,0 +1,48 @@
+
+$baseFontFamily: Oxygen;
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+@import 'bootstrap';
+body{
+	padding-top: 170px;
+	background-color: #fff;
+	font-family: "Lucida Grande", verdana, arial, helvetica, sans-serif;
+  font-size: 0.81em;
+  color:#6e6e6e;
+}
+.navbar {
+	background-color: #669900;
+
+}
+.footer{
+	background-color: black;
+		color: $grayLight;
+		padding-left: 33%;
+		font-size: 0.7em;
+		margin-top: 50px;
+	}
+	.span8{
+		background-color: #66cc00;
+		padding-left: 15px;
+	}
+
+h1{
+	color:#6e6e6e;
+}
+	#header{
+		height:53px;
+		background-color: green;
+		border-bottom:1px solid #191919;
+		z-index:100;
+		line-height:53px;
+		margin-bottom:1px;
+		display: block;
+			}
+	.navbar{
+		color: #66cc00;
+	}
+	.navbar a {
+		color: #6e6e6e;
+	}.navbar hover {
+		color: #66cc00 ;
+	}
+	@import  'bootstrap-responsive';
