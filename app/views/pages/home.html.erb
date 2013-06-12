@@ -1,4 +1,6 @@
-
+<% if user_signed_in? %>
+<h1>You are logged in </h1>
+<% else %>
 <div class="row-fluid">
 	
   <div class="span4">
@@ -22,6 +24,7 @@
 
 
 </div>
+<% end %>
 
 
 

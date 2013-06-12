@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'jquery-rails'
-#gem 'devise'
-#gem 'simple_form'
+gem 'devise'
+gem 'simple_form'
 #gem "paperclip", "~> 3.0" 
 #gem 'faker'
 #gem 'will_paginate'
@@ -14,7 +14,7 @@ group :production do
 end
 group :development, :test do
 	gem 'sqlite3', '1.3.7'
-	gem 'mocha'
+	#gem 'mocha'
 end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

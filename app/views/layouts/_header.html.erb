@@ -10,10 +10,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-             <a class="brand" href="/">TVWC</a>
+            <!--Be user to leave the brand out there if you want it shown-->
+             
+             <%= link_to "TVWC Blog", root_path, class: "brand" %>
 
+             <!-- everything that you want hidden at 940px or less, place within here -->
                 <div class="nav-collapse">
-                    <ul class="nav">
+                    <ul class="nav"> 
                         <li>
                             <%= link_to 'Topics',  root_path %>
                         </li>
@@ -25,7 +28,12 @@
                         </li>
                     </ul>
                     <ul class="nav pull-right">
-                                <li><%= link_to 'Login',  '#' %></li>
+                        <% if user_signed_in? %>
+                                 <li><%= link_to 'Edit Profile',  edit_user_registration_path %></li>
+                                <li><%= link_to 'Logout',  destroy_user_session_path, method: :delete %>
+                                <% else %>
+                                <li><%= link_to 'Login',  new_user_session_path %></li>
+                                <% end %>
                     </ul>
                 </div>
         </div>
