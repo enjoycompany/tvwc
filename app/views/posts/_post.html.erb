@@ -1,10 +1,12 @@
 <div class="span9">
 <tr>
-    <td><strong><%= post.title %></strong></td></tr>
-  <tr>  <td><%= post.content %></td>
-<td><%= post.posted %></td>/<tr>
+    <td width="25%"><strong><%= post.title %></strong></td>
+  <td width="60%"> <%= post.content %></td>
+<td width="15%"><%= post.posted %></td>
     <tr><td><%= link_to 'Show', post %></td>
+    	<% if current_user == post.user %>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-
+    <% end %>
+</tr>
 </div>

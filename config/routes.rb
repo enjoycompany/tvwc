@@ -1,6 +1,15 @@
-Tvwc::Application.routes.draw do
-  resources :posts
+Tvwc::Application.routes.draw do 
+  resources :posts, :has_many => :comments
 
+  resources :comments
+
+ # resources :posts do
+   # resources :comments
+  #end
+  get ':controller/:action/:id'
+  get':controller/:action/:id.:format'
+
+  #get.root :controller => "post"
 
   devise_for :users
 
@@ -10,6 +19,11 @@ Tvwc::Application.routes.draw do
   get 'links'=>"pages#links"
 
   get 'stories' => "pages#stories"
+  get "posts/show"
+  get "posts/new"
+  get "posts/index"
+
+  get "comments/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
